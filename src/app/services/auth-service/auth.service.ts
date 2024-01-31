@@ -15,25 +15,6 @@ export class AuthService {
   ) {}
 
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
-    //forget about: how to get the authority of user (I have kept it in shared service)
-    const token = this.cookieservice.get('jwt')
-    console.log(token)
-    if (token) {
-      console.log(route.routeConfig?.path , "url")
-      if (route.routeConfig && (route.routeConfig.path === 'login' || route.routeConfig.path === '')) {
-        this.router.navigate(['/chat-page']);
-      }
-      return this.chatservice.getUser().pipe(
-        map((res: any) => {
-          return true;
-        }),
-      );
-    } else {
-      if (route.routeConfig && route.routeConfig.path === 'login') {
-        return of(true);
-      } else {
-        this.router.navigate(['/']);
-      }
-    }
+    return of(true)
   }
 }

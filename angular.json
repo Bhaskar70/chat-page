@@ -19,6 +19,7 @@
           "options": {
             "outputPath": "dist/chat-app",
             "index": "src/index.html",
+            "baseHref": "/chat-page/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"

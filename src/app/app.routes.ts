@@ -6,8 +6,8 @@ import { ChatPageComponent } from './component/chat-page/chat-page.component';
 import { AuthService } from './services/auth-service/auth.service';
 
 export const routes: Routes = [
-    {path:'' , component:LandingPageComponent, canActivate :[AuthService]},
-    {path:'login' , component:LoginComponent , canActivate:[AuthService]},
-    {path:'register' , component:RegisterComponent, canActivate :[AuthService]},
-    {path:'chat-page' , component:ChatPageComponent, canActivate :[AuthService]}
+    {path:'' , component:LandingPageComponent},
+    {path:'login' , component:LoginComponent },
+    {path:'register' , component:RegisterComponent},
+    {path:'chat-page' , component:ChatPageComponent}
 ];
